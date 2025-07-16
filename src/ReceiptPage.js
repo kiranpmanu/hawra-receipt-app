@@ -69,7 +69,7 @@ const ReceiptPage = () => {
           <div className="w-full overflow-x-auto">
             <div
               ref={receiptRef}
-              className="bg-[#fdf6e3] text-black border border-black w-full max-w-[800px] aspect-video px-4 sm:px-6 py-4 font-sans text-sm leading-relaxed overflow-hidden flex flex-col justify-between"
+              className="bg-[#fdf6e3] text-black border border-black w-[800px] max-w-full px-4 sm:px-6 py-4 font-sans text-sm leading-relaxed flex flex-col justify-between"
             >
               {/* Header */}
               <div className="flex justify-between items-center mb-2">
@@ -82,7 +82,9 @@ const ReceiptPage = () => {
                   <h1 className="font-bold text-sm sm:text-base text-red-700">
                     HAWRA SPORTS HALL INTERNATIONAL
                   </h1>
-                  <p className="text-xs sm:text-sm text-red-700">SCHOOL OF MARTIAL ARTS</p>
+                  <p className="text-xs sm:text-sm text-red-700">
+                    SCHOOL OF MARTIAL ARTS
+                  </p>
                 </div>
                 <img
                   src={jskaLogo}
@@ -97,8 +99,8 @@ const ReceiptPage = () => {
                 FEE RECEIPT
               </h2>
 
-              {/* Fixed Paragraph Format */}
-              <p className="text-sm mb-6 leading-relaxed text-justify">
+              {/* Sentence with wrapping */}
+              <p className="text-sm mb-6 leading-relaxed text-justify flex flex-wrap items-center gap-2">
                 Received from{' '}
                 <span className="font-bold text-base border-b border-black px-2 inline-block min-w-[100px] text-center">
                   {name || ' '}
@@ -110,7 +112,7 @@ const ReceiptPage = () => {
                 for monthly fee.
               </p>
 
-              {/* Footer Row */}
+              {/* Footer */}
               <div className="flex justify-between text-sm font-medium">
                 <p><strong>Date:</strong> {date || '____-__-__'}</p>
                 <p><strong>DOJO incharge:</strong> Pradeep Kumar P</p>
