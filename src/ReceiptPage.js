@@ -97,14 +97,14 @@ const ReceiptPage = () => {
                 FEE RECEIPT
               </h2>
 
-              {/* Paragraph Format */}
+              {/* Fixed Paragraph Format */}
               <p className="text-sm mb-6 leading-relaxed text-justify">
                 Received from{' '}
-                <span className="inline-block min-w-[180px] font-bold text-base border-b-2 border-black text-center mx-1">
+                <span className="font-bold text-base border-b border-black px-2 inline-block min-w-[100px] text-center">
                   {name || ' '}
                 </span>{' '}
                 the amount of{' '}
-                <span className="inline-block min-w-[130px] font-bold text-base border-b-2 border-black text-center mx-1">
+                <span className="font-bold text-base border-b border-black px-2 inline-block min-w-[80px] text-center">
                   ₹{amount || ' '}
                 </span>{' '}
                 for monthly fee.
