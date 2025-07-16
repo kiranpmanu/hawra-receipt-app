@@ -66,59 +66,61 @@ const ReceiptPage = () => {
       {/* Receipt Preview */}
       {showPreview && (
         <>
-          <div
-            ref={receiptRef}
-            className="bg-[#fdf6e3] text-black border border-black w-full max-w-[800px] aspect-video px-6 py-4 font-sans text-sm leading-relaxed overflow-hidden flex flex-col justify-between"
-          >
-            {/* Header */}
-            <div className="flex justify-between items-center mb-2">
-              <img
-                src={hawraLogo}
-                alt="Left Logo"
-                className="h-10 w-10 object-cover rounded-full border"
-              />
-              <div className="text-center">
-                <h1 className="font-bold text-sm sm:text-base text-red-700">
-                  HAWRA SPORTS HALL INTERNATIONAL
-                </h1>
-                <p className="text-xs sm:text-sm text-red-700">SCHOOL OF MARTIAL ARTS</p>
+          <div className="w-full overflow-x-auto">
+            <div
+              ref={receiptRef}
+              className="bg-[#fdf6e3] text-black border border-black w-full max-w-[800px] aspect-video px-4 sm:px-6 py-4 font-sans text-sm leading-relaxed overflow-hidden flex flex-col justify-between"
+            >
+              {/* Header */}
+              <div className="flex justify-between items-center mb-2">
+                <img
+                  src={hawraLogo}
+                  alt="Left Logo"
+                  className="h-10 w-10 object-cover rounded-full border"
+                />
+                <div className="text-center">
+                  <h1 className="font-bold text-sm sm:text-base text-red-700">
+                    HAWRA SPORTS HALL INTERNATIONAL
+                  </h1>
+                  <p className="text-xs sm:text-sm text-red-700">SCHOOL OF MARTIAL ARTS</p>
+                </div>
+                <img
+                  src={jskaLogo}
+                  alt="Right Logo"
+                  className="h-10 w-10 object-cover rounded-full border"
+                />
               </div>
-              <img
-                src={jskaLogo}
-                alt="Right Logo"
-                className="h-10 w-10 object-cover rounded-full border"
-              />
+
+              <hr className="border-black my-1" />
+
+              <h2 className="text-center font-semibold text-md underline my-2">
+                FEE RECEIPT
+              </h2>
+
+              {/* Paragraph Format */}
+              <p className="text-sm mb-6 leading-relaxed text-justify">
+                Received from{' '}
+                <span className="inline-block min-w-[180px] font-bold text-base border-b-2 border-black text-center mx-1">
+                  {name || ' '}
+                </span>{' '}
+                the amount of{' '}
+                <span className="inline-block min-w-[130px] font-bold text-base border-b-2 border-black text-center mx-1">
+                  ₹{amount || ' '}
+                </span>{' '}
+                for monthly fee.
+              </p>
+
+              {/* Footer Row */}
+              <div className="flex justify-between text-sm font-medium">
+                <p><strong>Date:</strong> {date || '____-__-__'}</p>
+                <p><strong>DOJO incharge:</strong> Pradeep Kumar P</p>
+              </div>
+
+              <hr className="border-black my-2" />
+              <p className="text-xs text-center text-gray-600">
+                This is a system-generated receipt. No signature required.
+              </p>
             </div>
-
-            <hr className="border-black my-1" />
-
-            <h2 className="text-center font-semibold text-md underline my-2">
-              FEE RECEIPT
-            </h2>
-
-            {/* Sentence Paragraph */}
-            <p className="text-sm mb-6 leading-relaxed text-justify">
-              Received from{' '}
-              <span className="inline-block min-w-[180px] font-bold text-base border-b-2 border-black text-center mx-1">
-                {name || ' '}
-              </span>{' '}
-              the amount of{' '}
-              <span className="inline-block min-w-[130px] font-bold text-base border-b-2 border-black text-center mx-1">
-                ₹{amount || ' '}
-              </span>{' '}
-              for monthly fee.
-            </p>
-
-            {/* Date and Authorized */}
-            <div className="flex justify-between text-sm font-medium">
-              <p><strong>Date:</strong> {date || '____-__-__'}</p>
-              <p><strong>DOJO incharge:</strong> Pradeep Kumar P</p>
-            </div>
-
-            <hr className="border-black my-2" />
-            <p className="text-xs text-center text-gray-600">
-              This is a system-generated receipt. No signature required.
-            </p>
           </div>
 
           <button
